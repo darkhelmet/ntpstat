@@ -1,0 +1,28 @@
+.TH ntpstat 1 "$Date: 2001/06/22 03:27:10 $"
+.UC 4
+.SH NAME
+ntpstat \- show network time synchronisation status
+.SH SYNOPSIS
+.B ntpstat
+.SH DESCRIPTION
+.I ntpstat
+will report the synchronisation state of the NTP daemon
+running on the local machine.  If the local system is found to be 
+synchronised to a reference time source,  
+.I ntpstat
+will report the approximate time accuracy.
+
+.SH RETURNS
+.I ntpstat
+returns 0 if clock is synchronised.
+.I ntpstat
+returns 1 if clock is not synchronised.
+.I ntpstat
+returns 2 if clock state is indeterminant, for example
+if ntpd is not contactable.
+
+.SH SEE ALSO
+ntpdc, ntpdq
+
+.SH AUTHOR
+G. Richard Keech (rkeech@redhat.com)
