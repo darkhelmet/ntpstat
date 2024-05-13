@@ -10,7 +10,11 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <sys/time.h>
+#if defined(__APPLE__) && defined(__MACH__)
+#include <mach/error.h>
+#else
 #include <error.h>
+#endif
 #define NTP_PORT  123
 
 /* This program uses an NTP mode 6 control message, which is the
